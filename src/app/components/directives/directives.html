@@ -1,0 +1,107 @@
+<h3 class="text-center">Let's Learn Directives</h3>
+
+<div>
+  Num is:
+  <input type="number" [(ngModel)]="num" />
+</div>
+
+<div class="border border-3 rounded-3 p-3 m-3">
+  <div>*ngIf Before Angular-17</div>
+  <div *ngIf="num%2 ==0"> {{num}} is Even Number</div>
+  <div *ngIf="num%2 !==0"> {{num}} is Odd Number</div>
+</div>
+
+<div class="border border-3 rounded-3 p-3 m-3">
+  <div>if After Angular-17</div>
+  @if(num%2==0){
+  <div>{{num}} is Even Number</div>
+  }@else{
+  <div>{{num}} is Odd Number</div>
+  }
+</div>
+
+<div class="border border-3 rounded-3 p-3 m-3">
+  <div>Hidden</div>
+  <div [hidden]="num%2!==0">{{num}} is Even Number</div>
+  <div [hidden]="num%2===0">{{num}} is Odd Number</div>
+</div>
+
+<div class="border border-3 rounded-3 p-3 m-3">
+  <div>Display Day Name Using switch-case</div>
+  @switch (num) {
+  @case (1) { <h1>Monday</h1> }
+  @case (2) { <h1>Tuesday</h1> }
+  @case (3) { <h1>Wednesday</h1> }
+  @case (4) { <h1>Thursday</h1> }
+  @case (5) { <h1>Friday</h1> }
+  @case (6) { <h1>Saturday</h1> }
+  @case (7) { <h1>Sunday</h1> }
+  @default { <h1>Not a Valid number</h1> }
+  }
+</div>
+
+<div class="border border-3 rounded-3 p-3 m-3">
+  <div>Car List using for loop</div>
+  <ul>
+    @for(car of cars; track $index) {
+    <li>{{car}}</li>
+    }
+  </ul>
+
+  <select>
+    @for (car of cars; track $index) {
+    <option>{{car}}</option>
+    }@empty {
+    <option>---No Cars---</option>
+    }
+  </select>
+</div>
+
+<div class="border border-3 rounded-3 p-3 m-3">
+  <div>Employee List in table</div>
+
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>Sl No</th>
+        <th>Emp Id</th>
+        <th>Name</th>
+        <th>Gender</th>
+        <th>Salary</th>
+        <th>isFirst?</th>
+        <th>isLast?</th>
+        <th>isEven?</th>
+        <th>isOdd</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (emp of employees; track $index) {
+      <tr>
+        <td>{{$index+1}}</td>
+        <td>{{emp.eId}}</td>
+        <td>{{emp.name}}</td>
+        <td>{{emp.gender}}</td>
+        <td>{{emp.sal}}</td>
+        <td>{{$first}}</td>
+        <td>{{$last}}</td>
+        <td>{{$even}}</td>
+        <td>{{$odd}}</td>
+      </tr>
+      }
+    </tbody>
+  </table>
+</div>
+
+<div class="border border-3 rounded-3 p-3 m-3">
+  <div>ngStyle helps to add Styling conditionally</div>
+  <p [style.color]="num % 2 == 0 ? 'blue' : 'red'"> Add a style </p>
+  <p [style.fontSize.px]='num % 2 == 0 ? 26 : 24'> Add style with unit </p>
+  <p [ngStyle]="num % 2 == 0 ? myStyle1 : myStyle2"> NgStyle for multiple values </p>
+</div>
+
+<div class="border border-3 rounded-3 p-3 m-3">
+  <input type="number" [(ngModel)]="num" />
+  <div>ngClass helps to add css classes conditionally</div>
+  <div [ngClass]="{'active': isActive, 'disabled': isDisabled}"></div>
+  <button class="btn" [ngClass]="num % 2 == 0 ? 'btn-success':'btn-danger'">Button with dynamic class</button>
+</div>
