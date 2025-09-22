@@ -1,22 +1,62 @@
 <h3 class="text-center">Let's Learn Directives</h3>
 
-<div>
+<app-my-modal>
+  <h3 id="title">Employee Table</h3>
+  <table class="table table-bordered">
+    <tbody>
+      <tr>
+        <td>data-1</td>
+        <td>data-2</td>
+        <td>data-3</td>
+        <td>data-4</td>
+      </tr>
+      <tr>
+        <td>data-1</td>
+        <td>data-2</td>
+        <td>data-3</td>
+        <td>data-4</td>
+      </tr>
+      <tr>
+        <td>data-1</td>
+        <td>data-2</td>
+        <td>data-3</td>
+        <td>data-4</td>
+      </tr>
+      <tr>
+        <td>data-1</td>
+        <td>data-2</td>
+        <td>data-3</td>
+        <td>data-4</td>
+      </tr>
+      <tr>
+        <td>data-1</td>
+        <td>data-2</td>
+        <td>data-3</td>
+        <td>data-4</td>
+      </tr>
+    </tbody>
+  </table>
+</app-my-modal>
+
+<div class="mt-2">
   Num is:
   <input type="number" [(ngModel)]="num" />
 </div>
 
 <div class="border border-3 rounded-3 p-3 m-3">
   <div>*ngIf Before Angular-17</div>
-  <div *ngIf="num%2 ==0"> {{num}} is Even Number</div>
-  <div *ngIf="num%2 !==0"> {{num}} is Odd Number</div>
+  <div *ngIf="num%2 ==0;else odd"> {{num}} is Even Number</div>
+  <ng-template #odd>
+    {{num}} is Odd Number
+  </ng-template>
 </div>
 
 <div class="border border-3 rounded-3 p-3 m-3">
   <div>if After Angular-17</div>
   @if(num%2==0){
-  <div>{{num}} is Even Number</div>
+    <div>{{num}} is Even Number</div>
   }@else{
-  <div>{{num}} is Odd Number</div>
+    <div>{{num}} is Odd Number</div>
   }
 </div>
 
@@ -104,4 +144,10 @@
   <div>ngClass helps to add css classes conditionally</div>
   <div [ngClass]="{'active': isActive, 'disabled': isDisabled}"></div>
   <button class="btn" [ngClass]="num % 2 == 0 ? 'btn-success':'btn-danger'">Button with dynamic class</button>
+</div>
+
+<div class="border border-3 rounded-3 p-3 m-3">
+  <h4>Custom Directive(numberonly)</h4>
+  <input type="text" appNumberonly />
+  <!-- input field is Host Element, appNumberOnly is the directive -->
 </div>

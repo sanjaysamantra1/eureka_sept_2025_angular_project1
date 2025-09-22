@@ -9,8 +9,8 @@ import { Demo1 } from '../demo1/demo1';
   imports: [
     // Databinding,
     // Directives
-    // ProductList
-    Demo1
+    ProductList
+    // Demo1
   ],
   templateUrl: './body.html',
   styleUrl: './body.css'
