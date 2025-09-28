@@ -3,14 +3,16 @@ import { Databinding } from './../databinding/databinding';
 import { Component } from '@angular/core';
 import { ProductList } from '../product-list/product-list';
 import { Demo1 } from '../demo1/demo1';
+import { PipesDemo } from '../pipes-demo/pipes-demo';
 
 @Component({
   selector: 'app-body',
   imports: [
     // Databinding,
     // Directives
-    ProductList
+    // ProductList
     // Demo1
+    PipesDemo
   ],
   templateUrl: './body.html',
   styleUrl: './body.css'

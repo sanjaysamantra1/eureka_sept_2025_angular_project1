@@ -1,0 +1,67 @@
+<h3 class="text-center">Let's Learn Pipes</h3>
+
+<div class="border border-2 rounded-2 p-2 m-2">
+  <div>Name is: {{myName}} </div>
+  <div>Name is: {{myName | uppercase}} </div>
+  <div>Name is: {{myName | lowercase}} </div>
+  <div>Name is: {{myName | titlecase}} </div>
+</div>
+
+<div class="border border-2 rounded-2 p-2 m-2">
+  <div>currency Pipe:</div>
+  <div>Salary is: {{salary}}</div>
+  <div>Salary is: {{salary | currency}}</div>
+  <div>Salary is: {{salary | currency : 'INR'}}</div>
+  <!-- input | pipeName : argument-1 : argument-2 -->
+  <div>Salary is: {{salary | currency : 'USD' : 'symbol'}}</div>
+  <div>Salary is: {{salary | currency : '&euro;'}}</div>
+  <div>Salary is: {{salary | currency : '&#x5143;'}}</div>
+</div>
+
+<div class="border border-2 rounded-2 p-2 m-2">
+  <div>Date Pipe:</div>
+  <div>{{today}}</div>
+  <div>{{today | date}}</div>
+  <div>{{today | date : 'shortDate'}}</div>
+  <div>{{today | date : 'mediumDate'}}</div>
+  <div>{{today | date : 'longDate'}}</div>
+  <div>{{today | date : 'fullDate' | uppercase}}</div>
+  <div>{{today | date : 'fullDate' | lowercase}}</div>
+  <div>{{today | date : 'shortTime'}}</div>
+  <div>{{today | date : 'mediumTime'}}</div>
+  <div>{{today | date : 'longTime'}}</div>
+  <div>{{today | date : 'fullTime'}}</div>
+  <div>{{today | date : 'dd / MMMM / yyyy'}}</div>
+</div>
+
+<div class="border border-2 rounded-2 p-2 m-2">
+  <div>Number/Decimal Pipe</div>
+  <div>{{ 12.111222333 | number: "3.2-5" }}</div>
+  <div>{{ 12.1 | number: "3.2-5" }}</div>
+  <div>{{0.5 | number:'3.2-5'}}</div>
+  <div>{{0.5 | percent}}</div>
+  <div>{{0.074 | percent}}</div>
+  <div>{{0.075 | percent}}</div>
+</div>
+
+<div class="border border-2 rounded-2 p-2 m-2">
+  <div>json & keyvalue Pipe</div>
+  <div>{{ user }}</div>
+  <div>{{ user | json }}</div>
+
+  @for(entry of user | keyvalue;track $index){
+  <div>{{entry.key}}---{{entry.value}}</div>
+  }
+</div>
+
+<div class="border border-2 rounded-2 p-2 m-2">
+  <div>Slice Pipe</div>
+  <div>{{ arr }}</div>
+  <div>{{ arr | slice : 2:5 }}</div>
+</div>
+
+<div class="border border-2 rounded-2 p-2 m-2">
+  <div>Custom Pipe (Ordinal)</div>
+  <div><input type="number" [(ngModel)]="num"></div>
+  <div>Ordinal value: {{num | ordinal}}</div>
+</div>
