@@ -9,7 +9,7 @@ import { Footer } from './components/footer/footer';
   selector: 'app-root',
   imports: [
     Navbar,
-    // Categories,
+    Categories,
     // Carousel,
     Body,
     Footer
