@@ -61,7 +61,23 @@
 </div>
 
 <div class="border border-2 rounded-2 p-2 m-2">
+  <div><input [(ngModel)]="myName"></div>
   <div>Custom Pipe (Ordinal)</div>
   <div><input type="number" [(ngModel)]="num"></div>
   <div>Ordinal value: {{num | ordinal}}</div>
+</div>
+
+<div class="border border-2 rounded-2 p-2 m-2">
+  <div>Need of impure Pipe:</div>
+
+  <div>
+    @for (ele of numArr | sortArr; track $index) {
+      <span>{{ele}} &nbsp;</span>
+    }
+    <div>
+      <input #newNum />
+      <button class="btn btn-primary" (click)="numArr.push(+newNum.value)">Add New Num</button>
+    </div>
+  </div>
+
 </div>

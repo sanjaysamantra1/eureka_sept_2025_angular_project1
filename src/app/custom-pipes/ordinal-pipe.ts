@@ -1,10 +1,12 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'ordinal'
+  name: 'ordinal',
+  pure: true
 })
 export class OrdinalPipe implements PipeTransform {
-  transform(num: number) {
+  transform(num: number) { // how many times transform()
+    console.log('Ordinal pipe called...')
     const rem = num % 10;
     let result = '';
     if (rem === 1) {

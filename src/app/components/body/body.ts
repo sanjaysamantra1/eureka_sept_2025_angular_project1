@@ -4,6 +4,7 @@ import { Component } from '@angular/core';
 import { ProductList } from '../product-list/product-list';
 import { Demo1 } from '../demo1/demo1';
 import { PipesDemo } from '../pipes-demo/pipes-demo';
+import { ParentDemo } from '../parent-demo/parent-demo';
 
 @Component({
   selector: 'app-body',
@@ -12,7 +13,8 @@ import { PipesDemo } from '../pipes-demo/pipes-demo';
     // Directives
     // ProductList
     // Demo1
-    PipesDemo
+    // PipesDemo
+    ParentDemo
   ],
   templateUrl: './body.html',
   styleUrl: './body.css'
