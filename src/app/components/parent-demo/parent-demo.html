@@ -1,9 +1,17 @@
 <div class="container text-center border border-2 mt-2">
   <div class="row">
     <h4>Parent Component</h4>
-    <div>My own data a is: {{a}}</div>
+    <div>My own data a is: {{a}}
+      <input #myInputBox type="number" [(ngModel)]="a">
+    </div>
     <div>My child's data b is: {{child1.b}}</div>
     <div>My child's data name is: {{parentName}}</div>
+
+    <div>
+      @for(item of items;track $index){
+        <span>{{item}} , &nbsp;</span>
+      }
+    </div>
   </div>
   <div class="row">
     <div class="col-sm-6 border border-2">
