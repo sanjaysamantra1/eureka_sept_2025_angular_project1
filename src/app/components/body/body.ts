@@ -6,6 +6,7 @@ import { Demo1 } from '../demo1/demo1';
 import { PipesDemo } from '../pipes-demo/pipes-demo';
 import { ParentDemo } from '../parent-demo/parent-demo';
 import { ClockDemo1 } from '../clock-demo1/clock-demo1';
+import { HttpDemo1 } from '../http-demo1/http-demo1';
 
 @Component({
   selector: 'app-body',
@@ -16,7 +17,8 @@ import { ClockDemo1 } from '../clock-demo1/clock-demo1';
     // Demo1
     // PipesDemo
     // ParentDemo
-    ClockDemo1
+    // ClockDemo1
+    HttpDemo1
   ],
   templateUrl: './body.html',
   styleUrl: './body.css'
