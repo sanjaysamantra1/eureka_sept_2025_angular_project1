@@ -33,7 +33,7 @@ export class HttpDemo1 {
   };
 
   fetchUsers_angular(){ // observable
-    this.httpClient.get(this.user_api_url).subscribe(
+    this.httpClient.get(this.user_api_url,{ observe: 'response' }).subscribe(
       (response)=>{console.log(response)},
       (error)=>{console.log(error)}
     );

@@ -1,0 +1,14 @@
+<h3>Comments List</h3>
+
+<table class="table-bordered table-striped">
+  <tbody>
+    @for (comment of commentsArr; track $index) {
+    <tr>
+      <td>{{comment.id}}</td>
+      <td>{{comment.name}}</td>
+      <td>{{comment.email}}</td>
+      <td>{{comment.body}}</td>
+    </tr>
+    }
+  </tbody>
+</table>

@@ -1,0 +1,57 @@
+<h3 class="text-center">Employee CRUD</h3>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8">
+      @if(!isLoading){
+        <table class="table table-bordered table-striped">
+          <tbody>
+            @for (emp of employees; track $index) {
+            <tr>
+              <td>{{emp.id}}</td>
+              <td>{{emp.firstName}}</td>
+              <td>{{emp.lastName}}</td>
+              <td>{{emp.email}}</td>
+              <td>{{emp.gender}}</td>
+              <td>{{emp.salary}}</td>
+              <td>
+                <button class="btn btn-danger" (click)="deleteEmp(emp.id)">Delete</button>
+                <button class="btn btn-primary mx-1" (click)="editEmp(emp)">Edit</button>
+              </td>
+            </tr>
+            }
+          </tbody>
+        </table>
+      }
+      @else {
+        <h1>Loading...</h1>
+      }
+    </div>
+    <div class="col-sm-4 border border-3 p-2">
+      <p>
+        id: <input [(ngModel)]='empObj.id' />
+      </p>
+      <p>
+        firstname: <input [(ngModel)]='empObj.firstName' />
+      </p>
+      <p>
+        lastname: <input [(ngModel)]='empObj.lastName' />
+      </p>
+      <p>
+        email: <input [(ngModel)]='empObj.email' />
+      </p>
+      <p>
+        gender: <input [(ngModel)]='empObj.gender' />
+      </p>
+      <p>
+        salary: <input [(ngModel)]='empObj.salary' />
+      </p>
+
+      @if(!isEdit){
+        <button class="btn btn-primary" (click)="addNewEmp()">Add Emp</button>
+      }@else {
+        <button class="btn btn-primary" (click)="saveEmpData()">Save Emp</button>
+      }
+    </div>
+  </div>
+</div>

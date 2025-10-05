@@ -7,6 +7,8 @@ import { PipesDemo } from '../pipes-demo/pipes-demo';
 import { ParentDemo } from '../parent-demo/parent-demo';
 import { ClockDemo1 } from '../clock-demo1/clock-demo1';
 import { HttpDemo1 } from '../http-demo1/http-demo1';
+import { UserCrud } from '../user-crud/user-crud';
+import { CommentDemo } from '../comment-demo/comment-demo';
 
 @Component({
   selector: 'app-body',
@@ -18,7 +20,9 @@ import { HttpDemo1 } from '../http-demo1/http-demo1';
     // PipesDemo
     // ParentDemo
     // ClockDemo1
-    HttpDemo1
+    // HttpDemo1
+    // UserCrud
+    CommentDemo
   ],
   templateUrl: './body.html',
   styleUrl: './body.css'
