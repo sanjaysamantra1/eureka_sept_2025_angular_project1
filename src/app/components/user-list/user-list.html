@@ -1,0 +1,24 @@
+<h3 class="text-center">User List using Class As Model</h3>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <table class="table table-bordered table-striped">
+        <tbody>
+          @for (user of userArr; track $index) {
+          <tr>
+            <td>{{user.id}}</td>
+            <td>{{user.firstName}}</td>
+            <td>{{user.lastName}}</td>
+            <td>{{user.getFullName()}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.gender}}</td>
+            <td>{{user.salary}}</td>
+            <td>{{user.getYearlySalary()}}</td>
+          </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

@@ -9,6 +9,7 @@ import { ClockDemo1 } from '../clock-demo1/clock-demo1';
 import { HttpDemo1 } from '../http-demo1/http-demo1';
 import { UserCrud } from '../user-crud/user-crud';
 import { CommentDemo } from '../comment-demo/comment-demo';
+import { UserList } from '../user-list/user-list';
 
 @Component({
   selector: 'app-body',
@@ -22,7 +23,8 @@ import { CommentDemo } from '../comment-demo/comment-demo';
     // ClockDemo1
     // HttpDemo1
     // UserCrud
-    CommentDemo
+    // CommentDemo
+    UserList
   ],
   templateUrl: './body.html',
   styleUrl: './body.css'
