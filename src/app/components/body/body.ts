@@ -10,6 +10,7 @@ import { HttpDemo1 } from '../http-demo1/http-demo1';
 import { UserCrud } from '../user-crud/user-crud';
 import { CommentDemo } from '../comment-demo/comment-demo';
 import { UserList } from '../user-list/user-list';
+import { ObservableDemo1 } from '../observable-demo1/observable-demo1';
 
 @Component({
   selector: 'app-body',
@@ -24,7 +25,8 @@ import { UserList } from '../user-list/user-list';
     // HttpDemo1
     // UserCrud
     // CommentDemo
-    UserList
+    // UserList
+    ObservableDemo1
   ],
   templateUrl: './body.html',
   styleUrl: './body.css'
