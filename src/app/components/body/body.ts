@@ -1,3 +1,4 @@
+import { ObservableDemo2 } from './../observable-demo2/observable-demo2';
 import { Directives } from './../directives/directives';
 import { Databinding } from './../databinding/databinding';
 import { Component } from '@angular/core';
@@ -11,6 +12,7 @@ import { UserCrud } from '../user-crud/user-crud';
 import { CommentDemo } from '../comment-demo/comment-demo';
 import { UserList } from '../user-list/user-list';
 import { ObservableDemo1 } from '../observable-demo1/observable-demo1';
+import { ObservableDemo3 } from '../observable-demo3/observable-demo3';
 
 @Component({
   selector: 'app-body',
@@ -26,7 +28,9 @@ import { ObservableDemo1 } from '../observable-demo1/observable-demo1';
     // UserCrud
     // CommentDemo
     // UserList
-    ObservableDemo1
+    // ObservableDemo1
+    // ObservableDemo2
+    ObservableDemo3
   ],
   templateUrl: './body.html',
   styleUrl: './body.css'
