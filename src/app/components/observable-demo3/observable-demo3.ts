@@ -31,17 +31,18 @@ export class ObservableDemo3 {
   }
 
   @ViewChild('loginBtn') loginBtn:any;
-  
+
   ngAfterViewInit() {
     /* this.http.get('https://fakestoreapi.com/products').subscribe(response => {
       console.log('loging successful')
     }) */
 
     fromEvent(this.loginBtn.nativeElement, 'click').pipe(exhaustMap((val) => {
-      return this.http.get('https://fakestoreapi.com/products')
+      return this.http.get('http://localhost:3000/users')
     })).subscribe({
       next: (res) => console.log('Response:', res),
       error: (err) => console.error('Error:', err),
-    })
+    });
+
   }
 }

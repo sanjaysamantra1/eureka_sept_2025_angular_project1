@@ -13,6 +13,7 @@ import { CommentDemo } from '../comment-demo/comment-demo';
 import { UserList } from '../user-list/user-list';
 import { ObservableDemo1 } from '../observable-demo1/observable-demo1';
 import { ObservableDemo3 } from '../observable-demo3/observable-demo3';
+import { SubjectDemo1 } from '../subject-demo1/subject-demo1';
 
 @Component({
   selector: 'app-body',
@@ -30,7 +31,8 @@ import { ObservableDemo3 } from '../observable-demo3/observable-demo3';
     // UserList
     // ObservableDemo1
     // ObservableDemo2
-    ObservableDemo3
+    // ObservableDemo3
+    SubjectDemo1
   ],
   templateUrl: './body.html',
   styleUrl: './body.css'
