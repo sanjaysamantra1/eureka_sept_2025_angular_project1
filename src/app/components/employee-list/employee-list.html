@@ -1,0 +1,13 @@
+<h3>Employee List</h3>
+
+<table class="table table-bordered">
+  <tbody>
+    @for (item of employees; track $index) {
+      <tr>
+        <td>{{ item.eId }}</td>
+        <td>{{ item.name }}</td>
+        <td>{{ item.sal }}</td>
+      </tr>
+    }
+  </tbody>
+</table>
