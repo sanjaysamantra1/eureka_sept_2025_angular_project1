@@ -1,0 +1,36 @@
+<h3 class="text-center">Lets Learn Model Driven Form</h3>
+
+<div class="border border-3 rounded-3 p-2 col-sm-4 offset-4">
+  <form [formGroup]="registerForm">
+    <p>
+      FirstName:
+      <input formControlName="firstName">
+    </p>
+    <p>
+      lastName:
+      <input formControlName="lastName">
+    </p>
+    <p>
+      email:
+      <input formControlName="email">
+    </p>
+    <div formGroupName="address">
+      <p>
+        City:
+        <input formControlName="city">
+      </p>
+      <p>
+        State:
+        <input formControlName="state">
+      </p>
+      <p>
+        pincode:
+        <input formControlName="pincode">
+      </p>
+    </div>
+    <input type="reset" value="Clear" class="mx-1 btn btn-danger">
+    <input type="submit" value="Submit" class="mx-1 btn btn-primary">
+
+    <pre>{{registerForm.value | json}}</pre>
+  </form>
+</div>

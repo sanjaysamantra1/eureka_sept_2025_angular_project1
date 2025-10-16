@@ -18,6 +18,9 @@ import { EmployeeList } from '../employee-list/employee-list';
 import { EmployeeAdd } from '../employee-add/employee-add';
 import { SignalDemo1 } from '../signal-demo1/signal-demo1';
 import { SignalDemo2 } from '../signal-demo2/signal-demo2';
+import { FormDemo1 } from '../form-demo1/form-demo1';
+import { TemplateFormDemo1 } from '../template-form-demo1/template-form-demo1';
+import { ModelFormDemo1 } from '../model-form-demo1/model-form-demo1';
 
 @Component({
   selector: 'app-body',
@@ -40,7 +43,10 @@ import { SignalDemo2 } from '../signal-demo2/signal-demo2';
     // EmployeeList,
     // EmployeeAdd
     // SignalDemo1
-    SignalDemo2
+    // SignalDemo2,
+    // FormDemo1
+    // TemplateFormDemo1
+    ModelFormDemo1
   ],
   templateUrl: './body.html',
   styleUrl: './body.css'

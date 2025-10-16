@@ -1,0 +1,16 @@
+<form name='myForm'>
+  Name:
+  <input name='userName' [(ngModel)]='name' required /><br><br>
+  Age:
+  <input name='userAge' [(ngModel)]='age' />
+</form>
+
+<style>
+  input.ng-valid {
+    border: 5px solid green;
+  }
+
+  input.ng-invalid {
+    border: 5px solid red;
+  }
+</style>
