@@ -22,6 +22,7 @@ import { FormDemo1 } from '../form-demo1/form-demo1';
 import { TemplateFormDemo1 } from '../template-form-demo1/template-form-demo1';
 import { ModelFormDemo1 } from '../model-form-demo1/model-form-demo1';
 import { DynamicForm } from '../dynamic-form/dynamic-form';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-body',
@@ -48,7 +49,9 @@ import { DynamicForm } from '../dynamic-form/dynamic-form';
     // FormDemo1
     // TemplateFormDemo1
     // ModelFormDemo1
-    DynamicForm
+    // DynamicForm
+
+    RouterOutlet,
   ],
   templateUrl: './body.html',
   styleUrl: './body.css'
