@@ -23,7 +23,8 @@
           <p class="card-text">Ratings: {{product.rating.rate}}
             <fa-icon [icon]="faStar" class='gold'></fa-icon>
             ({{product.rating.count}})</p>
-          <a href="#" class="btn btn-primary">Details</a>
+          <button class="btn btn-primary mx-1" [routerLink]="['/productdetails']"
+            [queryParams]="{id:product.id,name:product.title,price:product.price}">Details</button>
         </div>
       </div>
     </div>

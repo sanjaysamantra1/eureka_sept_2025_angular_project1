@@ -5,13 +5,15 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import Swal from 'sweetalert2';
 import { Zoomout } from '../../directives/zoomout';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-product-list',
   imports: [
     NgxPaginationModule,
     FontAwesomeModule,
-    Zoomout
+    Zoomout,
+    RouterLink
   ],
   templateUrl: './product-list.html',
   styleUrl: './product-list.css'
