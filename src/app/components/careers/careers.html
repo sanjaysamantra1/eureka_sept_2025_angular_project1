@@ -1,1 +1,18 @@
-<h2>This is Careers component</h2>
+<h2 class="text-center">This is Careers component</h2>
+<hr />
+
+<div class="row">
+  <div class="col-sm-4">
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="permanent">Permanent Jobs</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="contract">Contract Jobs</a>
+      </li>
+    </ul>
+  </div>
+  <div class="col-sm-8">
+    <router-outlet></router-outlet>
+  </div>
+</div>

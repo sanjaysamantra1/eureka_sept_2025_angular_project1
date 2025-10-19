@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { UserInformationService } from '../../services/user-information-service';
 
 @Component({
   selector: 'app-navbar',
@@ -11,5 +12,6 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   styleUrl: './navbar.css'
 })
 export class Navbar {
-
+  userInfo = inject(UserInformationService);
+  userRole = this.userInfo.getUserRole()
 }
